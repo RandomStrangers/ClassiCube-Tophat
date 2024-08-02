@@ -41,7 +41,7 @@ jobs:
       - uses: ./.github/actions/notify_failure
         if: ${{ always() && steps.compile.outcome == 'failure' }}
         with:
-          NOTIFY_MESSAGE: 'Failed to compile 32 bit Classic 0.0.1.9 Linux build! <@999409543001931788>'
+          NOTIFY_MESSAGE: 'Failed to compile 32 bit ClassiCube Tophat Linux build! <@999409543001931788>'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'
       
       
@@ -49,19 +49,19 @@ jobs:
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-nix32-gl1'
-          DEST_NAME: 'Classic0019-Linux32-OpenGL'
+          DEST_NAME: 'ClassiCube-Tophat-Linux32-OpenGL'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-nix32-gl2'
-          DEST_NAME: 'Classic0019-Linux32-ModernGL'
+          DEST_NAME: 'ClassiCube-Tophat-Linux32-ModernGL'
           
           
       - uses: ./.github/actions/notify_success
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
-          NOTIFY_MESSAGE: 'Successfully compiled 32 bit Classic 0.0.1.9 Linux builds.'
+          NOTIFY_MESSAGE: 'Successfully compiled 32 bit ClassiCube Tophat Linux builds.'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'
 
 #============================================
@@ -90,7 +90,7 @@ jobs:
       - uses: ./.github/actions/notify_failure
         if: ${{ always() && steps.compile.outcome == 'failure' }}
         with:
-          NOTIFY_MESSAGE: 'Failed to compile 64 bit TRPClient Linux build! <@999409543001931788>'
+          NOTIFY_MESSAGE: 'Failed to compile 64 bit ClassiCube Tophat Linux build! <@999409543001931788>'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'
           
           
@@ -98,23 +98,23 @@ jobs:
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-nix64-gl1'
-          DEST_NAME: 'Classic0019-Linux64-OpenGL'
+          DEST_NAME: 'ClassiCube-Tophat-Linux64-OpenGL'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-nix64-gl2'
-          DEST_NAME: 'Classic0019-Linux64-ModernGL'
+          DEST_NAME: 'ClassiCube-Tophat-Linux64-ModernGL'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-sdl64-gl2'
-          DEST_NAME: 'Classic0019-Linux64-SDL2'
+          DEST_NAME: 'ClassiCube-Tophat-Linux64-SDL2'
           
           
       - uses: ./.github/actions/notify_success
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
-          NOTIFY_MESSAGE: 'Successfully compiled 64 bit Classic 0.0.1.9 Linux builds.'
+          NOTIFY_MESSAGE: 'Successfully compiled 64 bit ClassiCube Tophat Linux builds.'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'

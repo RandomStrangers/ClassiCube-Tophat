@@ -41,7 +41,7 @@ jobs:
       - uses: ./.github/actions/notify_failure
         if: ${{ always() && steps.compile.outcome == 'failure' }}
         with:
-          NOTIFY_MESSAGE: 'Failed to compile 32 bit Classic 0.0.1.9 Windows build'
+          NOTIFY_MESSAGE: 'Failed to compile 32 bit ClassiCube Tophat Windows build'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'
           
           
@@ -49,31 +49,31 @@ jobs:
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-w32-d3d9.exe'
-          DEST_NAME: 'Classic0019-Win32-Direct3D9.exe'
+          DEST_NAME: 'ClassiCube-Tophat-Win32-Direct3D9.exe'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-w32-ogl.exe'
-          DEST_NAME: 'Classic0019-Win32-OpenGL.exe'
+          DEST_NAME: 'ClassiCube-Tophat-Win32-OpenGL.exe'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-w32-d3d11.exe'
-          DEST_NAME: 'Classic0019-Win32-Direct3D11.exe'
+          DEST_NAME: 'ClassiCube-Tophat-Win32-Direct3D11.exe'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-w9x-ogl.exe'
-          DEST_NAME: 'Classic0019-Win9x.exe'
+          DEST_NAME: 'ClassiCube-Tophat-Win9x.exe'
           
           
       - uses: ./.github/actions/notify_success
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
-          NOTIFY_MESSAGE: 'Successfully compiled 32 bit Classic 0.0.1.9 Windows builds.'
+          NOTIFY_MESSAGE: 'Successfully compiled 32 bit ClassiCube Tophat Windows builds.'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'
           
           
@@ -104,7 +104,7 @@ jobs:
       - uses: ./.github/actions/notify_failure
         if: ${{ always() && steps.compile.outcome == 'failure' }}
         with:
-          NOTIFY_MESSAGE: 'Failed to compile 64 bit Classic 0.0.1.9 Windows build'
+          NOTIFY_MESSAGE: 'Failed to compile 64 bit ClassiCube Tophat Windows build'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'
           
           
@@ -112,23 +112,23 @@ jobs:
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-w64-d3d9.exe'
-          DEST_NAME: 'Classic0019-Win64-Direct3D9.exe'
+          DEST_NAME: 'ClassiCube-Tophat-Win64-Direct3D9.exe'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-w64-ogl.exe'
-          DEST_NAME: 'Classic0019-Win64-OpenGL.exe'
+          DEST_NAME: 'ClassiCube-Tophat-Win64-OpenGL.exe'
           
       - uses: ./.github/actions/upload_build
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'src/cc-w64-d3d11.exe'
-          DEST_NAME: 'Classic0019-Win64-Direct3D11.exe'
+          DEST_NAME: 'ClassiCube-Tophat-Win64-Direct3D11.exe'
           
           
       - uses: ./.github/actions/notify_success
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
-          NOTIFY_MESSAGE: 'Successfully compiled 64 bit Classic 0.0.1.9 Windows builds.'
+          NOTIFY_MESSAGE: 'Successfully compiled 64 bit ClassiCube Tophat Windows builds.'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'

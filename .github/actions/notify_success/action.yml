@@ -3,12 +3,12 @@ description: Sends a notification that a workflow has finished.
 inputs:
   BOT_USERNAME:
     description: 'Username to use for the discord bot message'
-    default: 'Classic 0.0.1.9 BuildBot'
+    default: 'ClassiCube Tophat BuildBot'
     required: false
     type: string
   BOT_AVATAR:
     description: 'URL to use for the avatar of the discord bot message'
-    default: 'https://raw.githubusercontent.com/RandomStrangers/Classic-0.0.19/master/misc/CCicon.png'
+    default: 'https://raw.githubusercontent.com/RandomStrangers/ClassiCube-Tophat/master/misc/CCicon.png'
     required: false
     type: string
   NOTIFY_MESSAGE:
